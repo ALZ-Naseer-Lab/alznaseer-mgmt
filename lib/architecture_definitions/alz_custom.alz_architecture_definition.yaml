@@ -3,20 +3,20 @@
   - "root_custom"
   "display_name": "Azure Landing Zones"
   "exists": true
-  "id": "alz"
+  "id": "alz-naseer-root"
   "parent_id": null
 - "archetypes":
   - "platform_custom"
   "display_name": "Platform"
   "exists": false
   "id": "platform"
-  "parent_id": "alz"
+  "parent_id": "alz-naseer-root"
 - "archetypes":
   - "landing_zones_custom"
   "display_name": "Landing Zones"
   "exists": false
   "id": "landingzones"
-  "parent_id": "alz"
+  "parent_id": "alz-naseer-root"
 - "archetypes":
   - "corp_custom"
   "display_name": "Corp"
@@ -40,7 +40,7 @@
   "display_name": "Sandbox"
   "exists": false
   "id": "sandbox"
-  "parent_id": "alz"
+  "parent_id": "alz-naseer-root"
 - "archetypes":
   - "security_custom"
   "display_name": "Security"
@@ -70,5 +70,5 @@
   "display_name": "Decommissioned"
   "exists": false
   "id": "decommissioned"
-  "parent_id": "alz"
+  "parent_id": "alz-naseer-root"
 "name": "alz_custom"
