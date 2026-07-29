@@ -22,6 +22,7 @@ terraform {
 }
 
 provider "alz" {
+  suppress_warning_policy_role_assignments = true
   library_overwrite_enabled = true
   library_references = [
     {
