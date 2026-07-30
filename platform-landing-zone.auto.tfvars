@@ -264,7 +264,7 @@ management_group_settings = {
     }
   }
   policy_assignments_to_modify = {
-    alz = {
+    "alz-naseer-root" = {
       policy_assignments = {
         Deploy-MDFC-Config-H224 = {
           parameters = {
