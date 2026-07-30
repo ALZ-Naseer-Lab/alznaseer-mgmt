@@ -251,6 +251,17 @@ management_group_settings = {
       management_group_name = "management"
     }
   }
+  retries = {
+    management_groups = {
+      error_message_regex = [
+        "AuthorizationFailed",
+        "Permission to Microsoft.Management/managementGroups on resources of type 'Write' is required on the management group or its ancestors.",
+        "Permission to write and delete on resources of type 'Microsoft.Authorization/roleAssignments' is required on the management group or its ancestors."
+      ]
+      interval_seconds     = 5
+      max_interval_seconds = 30
+    }
+  }
   policy_assignments_to_modify = {
     "alz-naseer-root" = {
       policy_assignments = {
@@ -422,8 +433,10 @@ hub_virtual_networks = {
     bastion = {
       subnet_address_prefix = "$${primary_bastion_subnet_address_prefix}"
       name                  = "$${primary_bastion_host_name}"
+      zones                 = []
       bastion_public_ip = {
-        name = "$${primary_bastion_host_public_ip_name}"
+        name  = "$${primary_bastion_host_public_ip_name}"
+        zones = []
       }
     }
   }
@@ -514,8 +527,10 @@ hub_virtual_networks = {
     bastion = {
       subnet_address_prefix = "$${secondary_bastion_subnet_address_prefix}"
       name                  = "$${secondary_bastion_host_name}"
+      zones                 = []
       bastion_public_ip = {
-        name = "$${secondary_bastion_host_public_ip_name}"
+        name  = "$${secondary_bastion_host_public_ip_name}"
+        zones = []
       }
     }
   }
