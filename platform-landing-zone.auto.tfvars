@@ -312,6 +312,11 @@ management_group_settings = {
   }
   */
   # role_assignment_name_use_random_uuid = false  # Uncomment this for backwards compatibility with previous naming convention
+  management_group_hierarchy_settings = {
+    default_management_group_name            = "$${root_parent_management_group_id}"
+    require_authorization_for_group_creation = false
+    update_existing                          = true
+  }
 }
 
 /*
@@ -450,10 +455,8 @@ hub_virtual_networks = {
     bastion = {
       subnet_address_prefix = "$${primary_bastion_subnet_address_prefix}"
       name                  = "$${primary_bastion_host_name}"
-      zones                 = []
       bastion_public_ip = {
         name              = "$${primary_bastion_host_public_ip_name}"
-        zones             = []
         sku               = "Standard"
         allocation_method = "Static"
         sku_tier          = "Regional"
@@ -547,10 +550,8 @@ hub_virtual_networks = {
     bastion = {
       subnet_address_prefix = "$${secondary_bastion_subnet_address_prefix}"
       name                  = "$${secondary_bastion_host_name}"
-      zones                 = []
       bastion_public_ip = {
         name              = "$${secondary_bastion_host_public_ip_name}"
-        zones             = []
         sku               = "Standard"
         allocation_method = "Static"
         sku_tier          = "Regional"
