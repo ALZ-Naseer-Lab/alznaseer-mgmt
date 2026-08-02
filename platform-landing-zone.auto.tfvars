@@ -452,8 +452,11 @@ hub_virtual_networks = {
       name                  = "$${primary_bastion_host_name}"
       zones                 = []
       bastion_public_ip = {
-        name  = "$${primary_bastion_host_public_ip_name}"
-        zones = []
+        name              = "$${primary_bastion_host_public_ip_name}"
+        zones             = []
+        sku               = "Standard"
+        allocation_method = "Static"
+        sku_tier          = "Regional"
       }
     }
   }
@@ -546,8 +549,11 @@ hub_virtual_networks = {
       name                  = "$${secondary_bastion_host_name}"
       zones                 = []
       bastion_public_ip = {
-        name  = "$${secondary_bastion_host_public_ip_name}"
-        zones = []
+        name              = "$${secondary_bastion_host_public_ip_name}"
+        zones             = []
+        sku               = "Standard"
+        allocation_method = "Static"
+        sku_tier          = "Regional"
       }
     }
   }
