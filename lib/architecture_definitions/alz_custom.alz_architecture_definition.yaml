@@ -9,66 +9,66 @@
   - "platform_custom"
   "display_name": "Platform"
   "exists": false
-  "id": "platform"
+  "id": "alz-naseer-platform"
   "parent_id": "alz-naseer-root"
 - "archetypes":
   - "landing_zones_custom"
   "display_name": "Landing Zones"
   "exists": false
-  "id": "landingzones"
+  "id": "alz-naseer-landingzones"
   "parent_id": "alz-naseer-root"
 - "archetypes":
   - "corp_custom"
   "display_name": "Corp"
   "exists": false
-  "id": "corp"
-  "parent_id": "landingzones"
+  "id": "alz-naseer-corp"
+  "parent_id": "alz-naseer-landingzones"
 - "archetypes":
   - "online_custom"
   "display_name": "Online"
   "exists": false
-  "id": "online"
-  "parent_id": "landingzones"
+  "id": "alz-naseer-online"
+  "parent_id": "alz-naseer-landingzones"
 - "archetypes":
   - "local_custom"
   "display_name": "Local"
   "exists": false
-  "id": "local"
-  "parent_id": "landingzones"
+  "id": "alz-naseer-local"
+  "parent_id": "alz-naseer-landingzones"
 - "archetypes":
   - "sandbox_custom"
   "display_name": "Sandbox"
   "exists": false
-  "id": "sandbox"
+  "id": "alz-naseer-sandbox"
   "parent_id": "alz-naseer-root"
 - "archetypes":
   - "security_custom"
   "display_name": "Security"
   "exists": false
-  "id": "security"
-  "parent_id": "platform"
+  "id": "alz-naseer-security"
+  "parent_id": "alz-naseer-platform"
 - "archetypes":
   - "management_custom"
   "display_name": "Management"
   "exists": false
-  "id": "management"
-  "parent_id": "platform"
+  "id": "alz-naseer-management"
+  "parent_id": "alz-naseer-platform"
 - "archetypes":
   - "connectivity_custom"
   "display_name": "Connectivity"
   "exists": false
-  "id": "connectivity"
-  "parent_id": "platform"
+  "id": "alz-naseer-connectivity"
+  "parent_id": "alz-naseer-platform"
 - "archetypes":
   - "identity_custom"
   "display_name": "Identity"
   "exists": false
-  "id": "identity"
-  "parent_id": "platform"
+  "id": "alz-naseer-identity"
+  "parent_id": "alz-naseer-platform"
 - "archetypes":
   - "decommissioned_custom"
   "display_name": "Decommissioned"
   "exists": false
-  "id": "decommissioned"
+  "id": "alz-naseer-decommissioned"
   "parent_id": "alz-naseer-root"
 "name": "alz_custom"

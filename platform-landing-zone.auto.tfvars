@@ -250,7 +250,7 @@ management_group_settings = {
   subscription_placement = {
     management = {
       subscription_id       = "$${subscription_id_management}"
-      management_group_name = "management"
+      management_group_name = "alz-naseer-management"
     }
   }
   retries = {
