@@ -261,6 +261,23 @@ management_group_settings = {
       interval_seconds     = 5
       max_interval_seconds = 30
     }
+    policy_role_assignments = {
+      error_message_regex = [
+        "AuthorizationFailed",
+        "ResourceNotFound",
+        "RoleAssignmentNotFound",
+        "Permission to write and delete on resources of type 'Microsoft.Authorization/roleAssignments' is required on the management group or its ancestors."
+      ]
+      interval_seconds     = 5
+      max_interval_seconds = 30
+    }
+  }
+  timeouts = {
+    management_group = {
+      create = "120m"
+      update = "120m"
+      read   = "120m"
+    }
   }
   policy_assignments_to_modify = {
     "alz-naseer-root" = {
@@ -435,8 +452,11 @@ hub_virtual_networks = {
       name                  = "$${primary_bastion_host_name}"
       zones                 = []
       bastion_public_ip = {
-        name  = "$${primary_bastion_host_public_ip_name}"
-        zones = []
+        name              = "$${primary_bastion_host_public_ip_name}"
+        zones             = []
+        sku               = "Standard"
+        allocation_method = "Static"
+        sku_tier          = "Regional"
       }
     }
   }
@@ -529,8 +549,11 @@ hub_virtual_networks = {
       name                  = "$${secondary_bastion_host_name}"
       zones                 = []
       bastion_public_ip = {
-        name  = "$${secondary_bastion_host_public_ip_name}"
-        zones = []
+        name              = "$${secondary_bastion_host_public_ip_name}"
+        zones             = []
+        sku               = "Standard"
+        allocation_method = "Static"
+        sku_tier          = "Regional"
       }
     }
   }
