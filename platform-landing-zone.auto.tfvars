@@ -48,7 +48,8 @@ custom_replacements = {
     primary_private_dns_zones_enabled                                    = true
     primary_private_dns_auto_registration_zone_enabled                   = true
     primary_private_dns_resolver_enabled                                 = true
-    primary_bastion_enabled                                              = true
+    # Bastion disabled: centralindia does not support zonal Bastion (BastionRegionAzNotSupported) and the module forces region AZs
+    primary_bastion_enabled                                              = false
 
     # Resource provisioning secondary connectivity
     secondary_firewall_enabled                                             = true
@@ -60,7 +61,8 @@ custom_replacements = {
     secondary_private_dns_zones_enabled                                    = true
     secondary_private_dns_auto_registration_zone_enabled                   = true
     secondary_private_dns_resolver_enabled                                 = true
-    secondary_bastion_enabled                                              = true
+    # Bastion disabled: southindia does not support zonal Bastion (BastionRegionAzNotSupported) and the module forces region AZs
+    secondary_bastion_enabled                                              = false
 
     # Resource group names
     management_resource_group_name                 = "rg-management-$${starter_location_01}"
@@ -315,7 +317,7 @@ management_group_settings = {
   management_group_hierarchy_settings = {
     default_management_group_name            = "$${root_parent_management_group_id}"
     require_authorization_for_group_creation = false
-    update_existing                          = true
+    update_existing                          = false
   }
 }
 
